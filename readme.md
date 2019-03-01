@@ -19,6 +19,7 @@ testset    -> ./input/test
 ## mask
 cd input  
 unzip mask.zip  
+download https://drive.google.com/file/d/1hfOu3_JR0vWJkNlRhKwhqJDaF3ID2vRs/view?usp=sharing  into ./input
 
 ## playground data  
 download playground data, then put them into input/train  
