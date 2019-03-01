@@ -7,8 +7,20 @@
 - torchvision==0.2.1
 
 
-## Solution
-https://www.kaggle.com/c/humpback-whale-identification/discussion/82366
+## Solution  
+https://www.kaggle.com/c/humpback-whale-identification/discussion/82366  
+
+### prepare data  
+## competetion dataset  
+trainset    -> ./input/train  
+testset    -> ./input/test  
+
+## mask
+cd input  
+unzip mask.zip  
+
+## playground data  
+download playground data, then put them into input/train  
 
 
 
