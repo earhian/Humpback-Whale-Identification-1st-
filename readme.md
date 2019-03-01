@@ -14,29 +14,29 @@ https://www.kaggle.com/c/humpback-whale-identification/discussion/82366
 
 ### Train
 line 301 in train.py
-step 1.  
+step 1.
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;            freeze = False
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;               model_name = 'senet154'
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;               min_num_class = 10
-             checkPoint_start = 0
-             lr = 3e-4
-             until train map5 >= 0.98
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;             checkPoint_start = 0
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;             lr = 3e-4  
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;             until train map5 >= 0.98
 
-step 2.
-             freeze = True
-             model_name = 'senet154'
-             min_num_class = 0
-             checkPoint_start = best checkPoint of step 1
-             lr = 3e-4
+step 2.  
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;             freeze = True  
+ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;            model_name = 'senet154'  
+  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;           min_num_class = 0  
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;         checkPoint_start = best checkPoint of step 1  
+     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;        lr = 3e-4  
 
-step 3.
-             freeze = True
-        model_name = 'senet154'
-        min_num_class = 0
-        checkPoint_start = best checkPoint of step 2
-        lr = 3e-5
+step 3.   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;             freeze = True  
+ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;       model_name = 'senet154'  
+   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;     min_num_class = 0  
+   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;     checkPoint_start = best checkPoint of step 2  
+   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;     lr = 3e-5  
 
 ### Test
-line 99 in test.py
-       checkPoint_start = best checkPoint of step 3
+line 99 in test.py  
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;       checkPoint_start = best checkPoint of step 3  
 
