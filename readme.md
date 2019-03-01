@@ -21,6 +21,7 @@ unzip mask.zip
 
 ## playground data  
 download playground data, then put them into input/train  
+https://www.kaggle.com/c/whale-categorization-playground/data
 
 
 
