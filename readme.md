@@ -15,9 +15,9 @@ https://www.kaggle.com/c/humpback-whale-identification/discussion/82366
 ### Train
 line 301 in train.py
 step 1.
-             freeze = False  
-             model_name = 'senet154'  
-             min_num_class = 10  
+               freeze = False  
+               model_name = 'senet154'  
+               min_num_class = 10  
              checkPoint_start = 0
              lr = 3e-4
              until train map5 >= 0.98
