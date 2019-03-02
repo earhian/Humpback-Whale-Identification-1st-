@@ -12,7 +12,7 @@
 https://www.kaggle.com/c/humpback-whale-identification/discussion/82366  
 
 ### prepare data  
-## competetion dataset  
+## competition dataset  
 trainset    -> ./input/train  
 testset    -> ./input/test  
 
