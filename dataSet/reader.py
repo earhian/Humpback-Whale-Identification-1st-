@@ -139,10 +139,6 @@ class WhaleTestDataset(Dataset):
         super(WhaleTestDataset, self).__init__()
         self.names = names
         self.labels = labels
-        if self.remove_newWhale and not mode == 'test':
-            indexs = [i for i in range(len(names)) if not self.labels[i] == 'new_whale']
-            self.names = self.names[indexs]
-            self.labels = self.labels[indexs]
         self.mode = mode
         self.bbox_dict = self.load_bbox()
         self.labels_dict = self.load_labels()
