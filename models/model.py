@@ -13,51 +13,49 @@ class model_whale(nn.Module):
         super().__init__()
         planes = 512
         self.model_name = model_name
-        try:
-            if model_name == 'xception':
-                self.basemodel = xception(True)
-                planes = 2048
-            elif model_name == 'inceptionv4':
-                self.basemodel = inceptionv4(pretrained='imagenet')
-                planes = 1536
-            elif model_name == 'dpn68':
-                self.basemodel = dpn68(pretrained=True)
-                planes = 832
-            elif model_name == 'dpn92':
-                self.basemodel = dpn92(pretrained=True)
-                planes = 2688
-            elif model_name == "dpn98":
-                self.basemodel = dpn98( pretrained=True)
-                planes = 2688
-            elif model_name == "dpn107":
-                self.basemodel = dpn107( pretrained=True)
-                planes = 2688
-            elif model_name == "dpn131":
-                self.basemodel = dpn131( pretrained=True)
-                planes = 2688
-            elif model_name == 'seresnext50':
-                self.basemodel = se_resnext50_32x4d(inchannels=inchannels, pretrained='imagenet')
-                planes = 2048
-            elif model_name == 'seresnext101':
-                self.basemodel = se_resnext101_32x4d(inchannels=inchannels, pretrained='imagenet')
-                planes = 2048
-            elif model_name == 'seresnet101':
-                self.basemodel = se_resnet101(pretrained='imagenet',  inchannels=inchannels)
-                planes = 2048
-            elif model_name == 'senet154':
-                self.basemodel = senet154(pretrained='imagenet', inchannels=inchannels)
-                planes = 2048
-            elif model_name == "seresnet152":
-                self.basemodel = se_resnet152(pretrained='imagenet')
-                planes = 2048
-            elif model_name == 'nasnet':
-                self.basemodel = nasnetalarge()
-                planes = 4032
-            else:
-                assert False, "{} is error".format(model_name)
-        except:
-            pass
 
+        if model_name == 'xception':
+            self.basemodel = xception(True)
+            planes = 2048
+        elif model_name == 'inceptionv4':
+            self.basemodel = inceptionv4(pretrained='imagenet')
+            planes = 1536
+        elif model_name == 'dpn68':
+            self.basemodel = dpn68(pretrained=True)
+            planes = 832
+        elif model_name == 'dpn92':
+            self.basemodel = dpn92(pretrained=True)
+            planes = 2688
+        elif model_name == "dpn98":
+            self.basemodel = dpn98( pretrained=True)
+            planes = 2688
+        elif model_name == "dpn107":
+            self.basemodel = dpn107( pretrained=True)
+            planes = 2688
+        elif model_name == "dpn131":
+            self.basemodel = dpn131( pretrained=True)
+            planes = 2688
+        elif model_name == 'seresnext50':
+            self.basemodel = se_resnext50_32x4d(inchannels=inchannels, pretrained='imagenet')
+            planes = 2048
+        elif model_name == 'seresnext101':
+            self.basemodel = se_resnext101_32x4d(inchannels=inchannels, pretrained='imagenet')
+            planes = 2048
+        elif model_name == 'seresnet101':
+            self.basemodel = se_resnet101(pretrained='imagenet',  inchannels=inchannels)
+            planes = 2048
+        elif model_name == 'senet154':
+            self.basemodel = senet154(pretrained='imagenet', inchannels=inchannels)
+            planes = 2048
+        elif model_name == "seresnet152":
+            self.basemodel = se_resnet152(pretrained='imagenet')
+            planes = 2048
+        elif model_name == 'nasnet':
+            self.basemodel = nasnetalarge()
+            planes = 4032
+        else:
+            assert False, "{} is error".format(model_name)
+  
         local_planes = 512
         self.local_conv = nn.Conv2d(planes, local_planes, 1)
         self.local_bn = nn.BatchNorm2d(local_planes)
