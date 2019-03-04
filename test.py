@@ -3,9 +3,8 @@ import numpy as np
 import os
 import torch
 from tqdm import tqdm
-from models.model import *
-from dataSet.reader import *
-from dataSet.transform import *
+from models import *
+from dataSet import *
 import os
 import shutil
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
