@@ -106,6 +106,3 @@ parser.add_argument('--model', '-m', metavar='MODEL', default='dpn92',
                     help='model architecture (default: dpn92)')
 
 
-
-if __name__ == '__main__':
-    main()
