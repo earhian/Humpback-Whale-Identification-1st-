@@ -58,7 +58,7 @@ class WhaleDataset(Dataset):
     def load_bbox(self):
         # Image,x0,y0,x1,y1
         print('loading bbox...')
-        bbox = pd.read_csv('./input/bbox_v3.csv')
+        bbox = pd.read_csv('./input/bboxs.csv')
         Images = bbox['Image'].tolist()
         x0s = bbox['x0'].tolist()
         y0s = bbox['y0'].tolist()
@@ -186,7 +186,7 @@ class WhaleTestDataset(Dataset):
 
     def load_bbox(self):
         print('loading bbox...')
-        bbox = pd.read_csv('./input/bbox_by_masks.csv')
+        bbox = pd.read_csv('./input/bboxs.csv')
         Images = bbox['Image'].tolist()
         x0s = bbox['x0'].tolist()
         y0s = bbox['y0'].tolist()
